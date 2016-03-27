@@ -1,0 +1,28 @@
+{
+  "name": "tokenobj",
+  "version": "1.0.0",
+  "description": "Make self-explanatory JSON-able token objects.",
+  "main": "tokenobj.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/tokenobj-js.git"
+  },
+  "keywords": [
+    "token",
+    "symbol",
+    "unique",
+    "json"
+  ],
+  "author": "M.K.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mk-pmb/tokenobj-js/issues"
+  },
+  "homepage": "https://github.com/mk-pmb/tokenobj-js#readme",
+  "devDependencies": {
+    "demofake-userdb": "^1.0.0"
+  }
+}
