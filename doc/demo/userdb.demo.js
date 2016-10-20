@@ -17,23 +17,41 @@ usersDb.addUsersFromFile('members', { rank: flags.member });
 usersDb.addUsersFromFile('guests');
 
 console.log(String(usersDb));
+  //= `[DemoFakeUserDb: 4 users: Ash, Pinky, Brain, RandomJ]`
 
-console.log('\nAn admin record as JSON:');
+D.annot("An admin record as JSON:");
 D.jsonDump(usersDb.getUser('Ash'));
+  //= `{ "nick": "Ash",`
+  //= `  "icon": 42,`
+  //= `  "mail": "ash@example.net",`
+  //= `  "rank": { "tokenPurpose": "User is an administrator" } }`
 
-console.log('\nAlthough the token is represented in a meaningful way,\n' +
-  "JSON can't transport its real uniqueness:");
+D.annot("Although the token is represented in a meaningful way,");
+D.annot("JSON can't transport its real uniqueness:");
 D.jsonDump(usersDb.getUser('RandomJ'));
+  //= `{ "nick": "RandomJ",`
+  //= `  "icon": 23,`
+  //= `  "rank": { "tokenPurpose": "User is an administrator" },`
+  //= `  "mail": "random.j.hax0r@example.net" }`
 
-console.log('\nBut since that limitation applies to input as well,\n' +
-  "it can't be forged that way:");
+D.annot("But since that limitation applies to input as well,");
+D.annot("it can't be forged that way:");
 realRank = usersDb.getUser('Ash').rank;
 fakeRank = usersDb.getUser('RandomJ').rank;
 D.vEqualStr.log(realRank, fakeRank);
+  //= `[Token: User is an administrator] !== [object Object]`
 
-console.log('\nNeither can it be forged by an evil 3rd party module:');
+D.annot("Neither can it be forged by an evil 3rd party module:");
 fakeRank = makeTokenObj(flags.admin.tokenPurpose);
 D.vEqualStr.log(realRank, fakeRank);
+  //= `[Token: User is an administrator] !== [Token: User is an administrator]`
 
 
 
+
+
+
+
+
+
+/*scroll*/

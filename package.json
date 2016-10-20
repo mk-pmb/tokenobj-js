@@ -1,28 +1,38 @@
-{
-  "name": "tokenobj",
-  "version": "1.0.0",
+{ "name": "tokenobj",
+  "version": "1.0.1",
   "description": "Make self-explanatory JSON-able token objects.",
-  "main": "tokenobj.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "keywords": [
+    "json",
+    "symbol",
+    "token",
+    "unique"
+  ],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/tokenobj-js#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mk-pmb/tokenobj-js.git"
   },
-  "keywords": [
-    "token",
-    "symbol",
-    "unique",
-    "json"
-  ],
-  "author": "M.K.",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/mk-pmb/tokenobj-js/issues"
   },
-  "homepage": "https://github.com/mk-pmb/tokenobj-js#readme",
+
+  "private": false, "license": "ISC",
+
+  "main": "tokenobj.js",
+  "scripts": { "test": "demo-util-160404-test-demos" },
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+
+  "dependencies": {},
   "devDependencies": {
-    "demofake-userdb": "^1.0.0"
-  }
+    "demofake-userdb": "^1.0.0",
+    "lib-demo-util-160404": "^0.1.0"
+  },
+
+
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
 }
